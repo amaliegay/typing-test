@@ -1,0 +1,7 @@
+This favicon was created using the VG5000 font:
+
+Copyright (c) 2015-2018, Justin Bihan <justin.bihan@gmail.com>
+
+repository url: https://gitlab.com/velvetyne/vg5000
+
+VG5000 is released under the OFL 1.1 - http://scripts.sil.org/OFL

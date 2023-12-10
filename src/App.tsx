@@ -8,19 +8,19 @@ interface State {
   correctCount: number;
   started: boolean;
   startTime: Date | null;
-  wordsPerMinute: number | null;
+  wordsPerMinute: number;
 }
 
 class App extends Component {
   state: State = {
     typeTest:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed in quas maiores ad pariatur. Suscipit ipsum quidem cumque vero possimus, tempora velit animi itaque ullam officia, maxime similique culpa soluta?",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, molestias qui. Odio sequi fuga temporibus nulla hic modi architecto culpa quasi, obcaecati voluptatum odit eius ex. Dolorum sapiente porro id!",
     words: [],
     enteredText: "",
     correctCount: 0,
     started: false,
     startTime: null,
-    wordsPerMinute: null,
+    wordsPerMinute: 0,
   };
 
   componentDidMount(): void {
@@ -59,8 +59,8 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h1>{this.state.correctCount}</h1>
-        <h6>{this.state.typeTest}</h6>
+        <h1>{this.state.wordsPerMinute}</h1>
+        <h6>{this.state.words.map((word) => word + " ")}</h6>
         <input value={this.state.enteredText} onChange={this.onWordChange} />
       </div>
     );
